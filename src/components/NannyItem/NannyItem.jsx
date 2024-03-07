@@ -12,7 +12,6 @@ import {
   ImgWrap,
   Li,
   MapIcon,
-  NannyText,
   OnlineIcon,
   Paragraph,
   RatingWrap,
