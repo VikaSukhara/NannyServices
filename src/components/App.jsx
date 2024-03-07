@@ -1,16 +1,19 @@
+import { FavoritesPage } from 'Pages/FavoritesPage/FavoritesPage';
+import { HomeDefault } from 'Pages/HomeDefault/HomeDefault';
+import { NanniesPage } from 'Pages/NanniesPage/NanniesPage';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './Layout/Layout';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" index element={<HomeDefault />} />
+          <Route path="/nannies" element={<NanniesPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+        </Route>
+      </Routes>
     </div>
   );
 };
