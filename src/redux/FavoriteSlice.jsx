@@ -8,10 +8,7 @@ export const favoriteSlice = createSlice({
   reducers: {
     addFavourites(state, { payload }) {
       state.favoriteData = [...state.favoriteData, payload];
-      console.log(state.favoriteData, 'state.favoriteData');
     },
-
-
     deleteFavourites(state, { payload }) {
       state.favoriteData = state.favoriteData.filter(item => item.id !== payload);
     },

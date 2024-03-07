@@ -10,15 +10,15 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Toaster } from 'react-hot-toast';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <BrowserRouter basename="/nannyservice">
-    <Provider store={store}>
-      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
-        <App />
-        <Toaster position="top-right" reverseOrder={true} />
-      </PersistGate>
-    </Provider>
-    <GlobalStyles />
-  </BrowserRouter>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter basename="/nannyservice">
+      <Provider store={store}>
+        <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+          <App />
+          <Toaster position="top-right" reverseOrder={true} />
+        </PersistGate>
+      </Provider>
+      <GlobalStyles />
+    </BrowserRouter>
+  </React.StrictMode>
 );

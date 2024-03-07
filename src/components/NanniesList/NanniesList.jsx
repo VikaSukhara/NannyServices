@@ -29,6 +29,7 @@ const NannyList = () => {
 
   useEffect(() => {
     dispatch(getLoading());
+
     get(child(dbRef, 'Nanny'))
       .then(snapshot => {
         if (snapshot.exists()) {
@@ -89,7 +90,6 @@ const NannyList = () => {
         {filteredNanniesList.map(nanny => (
           <NannyItem nanny={nanny} id={nanny.id} />
         ))}
-        
 
         {!isLoading && filteredNanniesList.length % 3 === 0 && (
           <Button type="button" onClick={() => setLimit(limit + 3)}>
