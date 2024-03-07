@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/nannyservices/static/css/main.cb00b42e.css",
-    "main.js": "/nannyservices/static/js/main.e889366d.js",
-    "static/media/backgroundImage.png": "/nannyservices/static/media/backgroundImage.2e22e8c1a756b8de2625.png",
-    "static/media/star.svg": "/nannyservices/static/media/star.98f3b1fb3269f56f85787e7bc5adb994.svg",
-    "static/media/heart.svg": "/nannyservices/static/media/heart.f24ead51e2f88e31c1475e1357b96a68.svg",
-    "index.html": "/nannyservices/index.html",
-    "static/media/user.svg": "/nannyservices/static/media/user.64d9f40e58bf4d4d00ca0eaebacd6dca.svg",
-    "static/media/map.svg": "/nannyservices/static/media/map.bc9fcd4f422ce001ddd6cc3c08765ae9.svg",
-    "static/media/cross.svg": "/nannyservices/static/media/cross.7f079dc05a1f5d0f7aeac223f020a435.svg",
-    "static/media/arrow.svg": "/nannyservices/static/media/arrow.083a04a0e758a2bce2e48050ce3c6e8a.svg",
-    "static/media/online.svg": "/nannyservices/static/media/online.b6e81428b5af49b55351d63d2cd3a12d.svg",
-    "static/media/experience.svg": "/nannyservices/static/media/experience.25b9cb1bef8869eafe85ac30998b20cf.svg",
-    "static/media/stick.svg": "/nannyservices/static/media/stick.319ba50d6835b05277ee10c10b44d677.svg",
-    "static/media/burger.svg": "/nannyservices/static/media/burger.5a84294ab43ff04832fb431c75e49db9.svg",
-    "main.cb00b42e.css.map": "/nannyservices/static/css/main.cb00b42e.css.map",
-    "main.e889366d.js.map": "/nannyservices/static/js/main.e889366d.js.map"
+    "main.css": "/NannyServices/static/css/main.cb00b42e.css",
+    "main.js": "/NannyServices/static/js/main.d1225d49.js",
+    "static/media/backgroundImage.png": "/NannyServices/static/media/backgroundImage.2e22e8c1a756b8de2625.png",
+    "static/media/star.svg": "/NannyServices/static/media/star.98f3b1fb3269f56f85787e7bc5adb994.svg",
+    "static/media/heart.svg": "/NannyServices/static/media/heart.f24ead51e2f88e31c1475e1357b96a68.svg",
+    "index.html": "/NannyServices/index.html",
+    "static/media/user.svg": "/NannyServices/static/media/user.64d9f40e58bf4d4d00ca0eaebacd6dca.svg",
+    "static/media/map.svg": "/NannyServices/static/media/map.bc9fcd4f422ce001ddd6cc3c08765ae9.svg",
+    "static/media/cross.svg": "/NannyServices/static/media/cross.7f079dc05a1f5d0f7aeac223f020a435.svg",
+    "static/media/arrow.svg": "/NannyServices/static/media/arrow.083a04a0e758a2bce2e48050ce3c6e8a.svg",
+    "static/media/online.svg": "/NannyServices/static/media/online.b6e81428b5af49b55351d63d2cd3a12d.svg",
+    "static/media/experience.svg": "/NannyServices/static/media/experience.25b9cb1bef8869eafe85ac30998b20cf.svg",
+    "static/media/stick.svg": "/NannyServices/static/media/stick.319ba50d6835b05277ee10c10b44d677.svg",
+    "static/media/burger.svg": "/NannyServices/static/media/burger.5a84294ab43ff04832fb431c75e49db9.svg",
+    "main.cb00b42e.css.map": "/NannyServices/static/css/main.cb00b42e.css.map",
+    "main.d1225d49.js.map": "/NannyServices/static/js/main.d1225d49.js.map"
   },
   "entrypoints": [
     "static/css/main.cb00b42e.css",
-    "static/js/main.e889366d.js"
+    "static/js/main.d1225d49.js"
   ]
 }
