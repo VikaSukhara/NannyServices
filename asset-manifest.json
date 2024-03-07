@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NannyServices/static/css/main.cb00b42e.css",
-    "main.js": "/NannyServices/static/js/main.d1225d49.js",
+    "main.js": "/NannyServices/static/js/main.60b49ecc.js",
     "static/media/backgroundImage.png": "/NannyServices/static/media/backgroundImage.2e22e8c1a756b8de2625.png",
     "static/media/star.svg": "/NannyServices/static/media/star.98f3b1fb3269f56f85787e7bc5adb994.svg",
     "static/media/heart.svg": "/NannyServices/static/media/heart.f24ead51e2f88e31c1475e1357b96a68.svg",
@@ -15,10 +15,10 @@
     "static/media/stick.svg": "/NannyServices/static/media/stick.319ba50d6835b05277ee10c10b44d677.svg",
     "static/media/burger.svg": "/NannyServices/static/media/burger.5a84294ab43ff04832fb431c75e49db9.svg",
     "main.cb00b42e.css.map": "/NannyServices/static/css/main.cb00b42e.css.map",
-    "main.d1225d49.js.map": "/NannyServices/static/js/main.d1225d49.js.map"
+    "main.60b49ecc.js.map": "/NannyServices/static/js/main.60b49ecc.js.map"
   },
   "entrypoints": [
     "static/css/main.cb00b42e.css",
-    "static/js/main.d1225d49.js"
+    "static/js/main.60b49ecc.js"
   ]
 }
