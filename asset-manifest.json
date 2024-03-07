@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nannyservice/static/css/main.cb00b42e.css",
-    "main.js": "/nannyservice/static/js/main.89ac5def.js",
+    "main.js": "/nannyservice/static/js/main.d8ddb0e0.js",
     "static/media/backgroundImage.png": "/nannyservice/static/media/backgroundImage.2e22e8c1a756b8de2625.png",
     "static/media/star.svg": "/nannyservice/static/media/star.98f3b1fb3269f56f85787e7bc5adb994.svg",
     "static/media/heart.svg": "/nannyservice/static/media/heart.f24ead51e2f88e31c1475e1357b96a68.svg",
@@ -15,10 +15,10 @@
     "static/media/stick.svg": "/nannyservice/static/media/stick.319ba50d6835b05277ee10c10b44d677.svg",
     "static/media/burger.svg": "/nannyservice/static/media/burger.5a84294ab43ff04832fb431c75e49db9.svg",
     "main.cb00b42e.css.map": "/nannyservice/static/css/main.cb00b42e.css.map",
-    "main.89ac5def.js.map": "/nannyservice/static/js/main.89ac5def.js.map"
+    "main.d8ddb0e0.js.map": "/nannyservice/static/js/main.d8ddb0e0.js.map"
   },
   "entrypoints": [
     "static/css/main.cb00b42e.css",
-    "static/js/main.89ac5def.js"
+    "static/js/main.d8ddb0e0.js"
   ]
 }
