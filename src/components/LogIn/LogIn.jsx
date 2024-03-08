@@ -1,4 +1,4 @@
-import { Formik, Form, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import {
   Button,
@@ -23,8 +23,6 @@ const SignInSchema = Yup.object().shape({
 });
 
 export const Login = ({ toggleModal }) => {
-  const [emailEntered, setEmailEntered] = useState(false);
-  const [passwordEntered, setPasswordEntered] = useState(false);
   const dispatch = useDispatch();
   const handleSubmit = data => {
     const auth = getAuth();
