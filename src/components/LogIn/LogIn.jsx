@@ -12,7 +12,6 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { getUser } from '../../redux/UserSlice';
 import { useDispatch } from 'react-redux';
 import toast, { Toaster } from 'react-hot-toast';
-import { useState } from 'react';
 
 const SignInSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
