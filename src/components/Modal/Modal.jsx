@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Button, ModalBack, ModalCard } from './Modal.styled';
-import { ReactComponent as IconCross } from '../../img/cross.svg';
+import { Button, CrossIcon, ModalBack, ModalCard } from './Modal.styled';
 
 const modalRootElement = document.querySelector('#portal');
 
@@ -29,7 +28,7 @@ export const Modal = ({ toggleModal, children }) => {
     <ModalBack onClick={onClickBackdrop}>
       <ModalCard>
         <Button onClick={toggleModal}>
-          <IconCross />
+          <CrossIcon />
         </Button>
 
         {children}

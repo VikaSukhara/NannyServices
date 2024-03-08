@@ -19,6 +19,7 @@ import {
 } from '../../redux/NannySlice';
 import { filtersNanyAction } from '../../redux/FiltersSlice';
 import { Loader } from 'components/Loader';
+import toast from 'react-hot-toast';
 
 const NannyList = () => {
   const [limit, setLimit] = useState(3);
@@ -35,7 +36,7 @@ const NannyList = () => {
         if (snapshot.exists()) {
           dispatch(getNannies(snapshot.val()));
         } else {
-          console.log('No data available');
+          toast.error('Unfortunately we were unable to find nannies',);
         }
       })
       .catch(error => {
@@ -53,7 +54,6 @@ const NannyList = () => {
   ];
 
   const handleSelect = event => {
-    console.log(event.target.value, 'event');
     event.preventDefault();
     setSelected(event.target.value);
     dispatch(filtersNanyAction(event.target.value));
@@ -74,9 +74,8 @@ const NannyList = () => {
               id="position"
               value={selected}
               onChange={handleSelect}
-              defaultValue={'DEFAULT'}
             >
-              <option value="DEFAULT"> A to Z </option>
+              <option selected> A to Z </option>
               {options.map(option => (
                 <option key={option} value={option}>
                   {option}

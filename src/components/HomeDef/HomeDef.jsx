@@ -1,5 +1,5 @@
-import { ReactComponent as Arrow } from '../../img/arrow.svg';
 import {
+  ArrowIcon,
   Button,
   CheckMarkIcon,
   CheckMarkWrap,
@@ -26,7 +26,7 @@ export const HomeDef = () => {
           <Button>
             <GetStartLink to="/nannies">
               Get started
-              <Arrow style={{ marginLeft: '18px' }} />
+              <ArrowIcon className="something" />
             </GetStartLink>
           </Button>
         </div>

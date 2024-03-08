@@ -1,22 +1,29 @@
 import styled from 'styled-components';
-import { Field, Form } from 'formik';
+import { Field, Form, ErrorMessage } from 'formik';
+
+export const StyledError = styled(ErrorMessage)`
+  color: red;
+  font-size: 15px;
+`;
+
+export const Wrap = styled.div`
+  width: 100%;
+  height: auto;
+`;
 
 export const Title = styled.h2`
   color: var(--span-color--);
-
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: -2%;
   margin-bottom: 10px;
 
   @media (min-width: 768px) {
-    font-size: 20px;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 25px;
+    line-height: 35px;
   }
   @media (min-width: 1440px) {
-    font-size: 24px;
     font-size: 40px;
     line-height: 48px;
   }
@@ -24,7 +31,7 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
   color: var(--paragraph-color--);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0%;
@@ -33,11 +40,11 @@ export const Text = styled.p`
   @media (min-width: 768px) {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 40px;
   }
   @media (min-width: 1440px) {
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -75,8 +82,6 @@ export const NannyName = styled.h3`
   letter-spacing: 0%;
 `;
 
-
-
 export const Forma = styled(Form)`
   display: flex;
   flex-wrap: wrap;
@@ -84,6 +89,11 @@ export const Forma = styled(Form)`
   gap: 4px;
 
   @media (min-width: 768px) {
+    margin-top: 30px;
+    gap: 8px;
+  }
+
+  @media (min-width: 1440px) {
     margin-top: 40px;
     gap: 8px;
   }
@@ -96,9 +106,9 @@ export const Input = styled(Field)`
   padding: 5px;
   border: 1px solid rgba(17, 16, 28, 0.1);
   border-radius: 10px;
-  ::placeholder {
+
+  &::placeholder {
     color: var(--span-color--);
-  
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
@@ -106,43 +116,57 @@ export const Input = styled(Field)`
   }
 
   @media (min-width: 768px) {
-    width: 232px;
-    height: 52px;
-    padding: 16px;
+    width: 100%;
+    height: 40px;
+
     border-radius: 12px;
-    ::placeholder {
+    &::placeholder {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    width: 100%;
+    height: 52px;
+    /* padding: 16px; */
+    border-radius: 12px;
+    &::placeholder {
       font-size: 16px;
       line-height: 20px;
     }
   }
 `;
+
 export const InputBig = styled(Field)`
   width: 270px;
   height: 30px;
   padding: 5px;
   border: 1px solid rgba(17, 16, 28, 0.1);
   border-radius: 10px;
-  ::placeholder {
+  &::placeholder {
     color: var(--span-color--);
-  
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 14px;
     letter-spacing: 0%;
   }
 
   @media (min-width: 768px) {
+    height: 40px;
     width: 430px;
-    height: 52px;
     padding: 16px;
     border-radius: 12px;
-    ::placeholder {
-      font-size: 16px;
 
+    &::placeholder {
+      font-size: 14px;
       line-height: 20px;
     }
     @media (min-width: 768px) {
-      width: 472px;
+      ::placeholder {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
 `;
@@ -157,36 +181,32 @@ export const InputAria = styled(Field)`
 
   &::placeholder {
     color: var(--span-color--);
-  
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 14px;
     letter-spacing: 0%;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
+
   @media (min-width: 768px) {
     width: 430px;
-    height: 116px;
+    height: 100px;
     padding: 16px;
-
     border-radius: 12px;
     margin-bottom: 24px;
-    &::placeholder {
-      font-size: 16px;
 
+    &::placeholder {
+      height: 116px;
+      font-size: 16px;
       line-height: 20px;
     }
   }
 
   @media (min-width: 768px) {
-    width: 472px;
+    &::placeholder {
+      transform: translateY(-30px);
+    }
   }
-`;
-
-export const Wrap = styled.div`
-  width: 100%;
-  padding: 0px;
-  height: auto;
 `;
 
 export const Button = styled.button`
@@ -203,10 +223,9 @@ export const Button = styled.button`
   letter-spacing: -1%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
-
+  /* margin-top: 25px; */
   &:hover {
-    background: rgba(16, 57, 49, 0.2);
+    background: #a1b3a8;
     color: var(--main-color--);
   }
 `;

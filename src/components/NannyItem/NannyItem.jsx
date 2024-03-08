@@ -29,7 +29,7 @@ import {
 } from './NannyItem.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectNannies } from '../../redux/NannySlice';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from 'components/Modal/Modal';
 import { Appointment } from 'components/Appointment/Appointment';
 import { selectIsLogin } from '../../redux/UserSlice';
@@ -38,6 +38,17 @@ import toast from 'react-hot-toast';
 export const NannyItem = ({ nanny, id }) => {
   const [isOpenMore, setIsOpenMore] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
+
+
+  useEffect(() => {
+    if (isOpenModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpenModal]);
+
+
 
   const dispatch = useDispatch();
   const isLogin = useSelector(selectIsLogin);

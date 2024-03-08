@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as CheckMark } from '../../img/experience.svg';
+import { ReactComponent as Arrow } from '../../img/arrow.svg';
 
 export const Wrap = styled.div`
   margin-right: auto;
@@ -10,7 +11,7 @@ export const Wrap = styled.div`
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border: 1px solid rgba(251, 251, 251, 0.4);
-   width: 100%;
+  width: 100%;
   @media (min-width: 768px) {
   }
   @media (min-width: 1440px) {
@@ -23,12 +24,14 @@ export const Wrap = styled.div`
 
 export const WrapText = styled.div`
   padding: 50px 30px;
-  min-height: 500px;
+  min-height: 568px;
 
   @media (min-width: 768px) {
+    min-height: 736px;
   }
   @media (min-width: 1440px) {
     padding: 163px 64px 163px 96px;
+    min-height: 736px;
   }
 `;
 
@@ -76,7 +79,6 @@ export const ExperienceNumber = styled.p`
 export const Img = styled.img`
   display: none;
 
-
   @media (min-width: 1440px) {
     display: block;
     width: 699px;
@@ -121,6 +123,14 @@ export const H3 = styled.h3`
     font-size: 28px;
   }
 `;
+export const ArrowIcon = styled(Arrow)`
+  margin-left: 18px;
+  &:hover {
+    transform: rotate(90deg);
+  }
+
+
+`;
 
 export const Button = styled.button`
   background: transparent;
@@ -132,8 +142,12 @@ export const Button = styled.button`
   margin-top: 90px;
   width: 190px;
   height: 50px;
-
   border: 1px solid rgba(251, 251, 251, 0.4);
+
+  &:hover ${ArrowIcon} {
+    transform: rotate(52deg);
+    }
+
 
   @media (min-width: 768px) {
   }
@@ -157,14 +171,14 @@ export const CheckMarkWrap = styled.div`
   border-radius: 13px;
   width: 54px;
   height: 54px;
-  background: var(--main-color--);;
+  background: var(--main-color--);
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const ExperienceTextWrap = styled.div`
-margin-left: 16px;
+  margin-left: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;

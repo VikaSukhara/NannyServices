@@ -8,9 +8,12 @@ export const Wrap = styled.div`
 
 export const Container = styled.div`
   padding: 10px 10px;
+  overflow: scroll;
+  height: 568px;
 
   @media (min-width: 768px) {
     padding: 40px 40px;
+    height: 736px;
   }
   @media (min-width: 1440px) {
     padding: 64px 128px 100px 128px;

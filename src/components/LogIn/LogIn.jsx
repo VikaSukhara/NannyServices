@@ -1,12 +1,30 @@
-import { Formik, Form } from 'formik';
+import { Formik, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { Button, Title, Paragraph, Input, Wrap } from './LogIn.styled';
+import {
+  Button,
+  Title,
+  Paragraph,
+  Input,
+  Wrap,
+  StyledError,
+} from './LogIn.styled';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { getUser } from '../../redux/UserSlice';
 import { useDispatch } from 'react-redux';
 import toast, { Toaster } from 'react-hot-toast';
+import { useState } from 'react';
+
+const SignInSchema = Yup.object().shape({
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: Yup.string()
+    .min(5, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+});
 
 export const Login = ({ toggleModal }) => {
+  const [emailEntered, setEmailEntered] = useState(false);
+  const [passwordEntered, setPasswordEntered] = useState(false);
   const dispatch = useDispatch();
   const handleSubmit = data => {
     const auth = getAuth();
@@ -27,17 +45,9 @@ export const Login = ({ toggleModal }) => {
         toggleModal();
       })
       .catch(err => {
-        console.error(toast.error('Login problem', err.message));
+        toast.error('Wrong email or password. Try again', err.message);
       });
   };
-
-  const SignInSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email').required('Required'),
-    password: Yup.string()
-      .min(5, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required('Required'),
-  });
 
   return (
     <Wrap>
@@ -56,12 +66,14 @@ export const Login = ({ toggleModal }) => {
           handleSubmit(data);
         }}
       >
-        <Form>
+        <Form style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
           <label>
             <Input name="email" placeholder="Email" type="email" />
+            <StyledError name="email" component="div" />
           </label>
           <label>
             <Input name="password" placeholder="Password" type="password" />
+            <StyledError name="password" component="div" />
           </label>
           <Button type="submit">Log in</Button>
         </Form>

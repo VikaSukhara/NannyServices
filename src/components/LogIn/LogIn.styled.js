@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Field } from 'formik';
+import { Field, ErrorMessage } from 'formik';
 export const Wrap = styled.div`
   margin: 0 auto;
   box-sizing: border-box;
@@ -16,11 +16,9 @@ export const Title = styled.h1`
 
   @media (min-width: 768px) {
     font-size: 20px;
-    font-size: 40px;
     line-height: 48px;
   }
   @media (min-width: 1440px) {
-    font-size: 24px;
     font-size: 40px;
     line-height: 48px;
   }
@@ -56,7 +54,7 @@ export const Button = styled.button`
   border-radius: 30px;
 
   &:hover {
-    background: rgba(16, 57, 49, 0.2);
+    background: #a1b3a8;
     color: var(--main-color--);
   }
 
@@ -69,14 +67,14 @@ export const Button = styled.button`
     margin-top: 22px;
   }
 `;
-export const Label = styled.label``;
+
 export const Input = styled(Field)`
   width: 100%;
   height: 52px;
   box-sizing: border-box;
   border: 1px solid rgba(17, 16, 28, 0.1);
   border-radius: 12px;
-  margin-bottom: 18px;
+
   padding: 18px 18px;
 
   &::placeholder {
@@ -88,4 +86,8 @@ export const Input = styled(Field)`
     letter-spacing: 0%;
     text-align: left;
   }
+`;
+export const StyledError = styled(ErrorMessage)`
+  color: red;
+  font-size: 15px;
 `;

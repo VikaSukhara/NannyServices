@@ -1,6 +1,13 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { Button, Title, Input, Wrap, Paragraph } from './Registration.styled';
+import {
+  Button,
+  Title,
+  Input,
+  Wrap,
+  Paragraph,
+  StyledError,
+} from './Registration.styled';
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -25,8 +32,6 @@ export const Registration = ({ toggleModal }) => {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then(userCredential => {
-        const user = userCredential.user;
-        console.log(user);
         updateProfile(auth.currentUser, {
           displayName: data.name,
         });
@@ -58,16 +63,19 @@ export const Registration = ({ toggleModal }) => {
           onSubmit(data);
         }}
       >
-        <Form>
+        <Form style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
           <label>
             <Input name="name" placeholder="Enter your name" />
+            <StyledError name="name" component="div" />
           </label>
 
           <label>
             <Input name="email" placeholder="jane@acme.com" type="email" />
+            <StyledError name="email" component="div" />
           </label>
           <label>
             <Input name="password" placeholder="Password" type="password" />
+            <StyledError name="password" component="div" />
           </label>
           <Button type="submit">Sign Up</Button>
         </Form>

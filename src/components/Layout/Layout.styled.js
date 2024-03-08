@@ -100,6 +100,9 @@ export const LinkLogo = styled(NavLink)`
   line-height: 28px;
   letter-spacing: -2%;
   text-align: left;
+  &:hover {
+    color: #def6e7;
+  }
 
   @media (min-width: 768px) {
     font-size: 24px;
@@ -167,6 +170,9 @@ export const Links = styled(NavLink)`
     bottom: -24px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
+  }
+  &:hover {
+    color: #def6e7;
   }
 `;
 
@@ -256,9 +262,14 @@ export const Button = styled.button`
   display: none;
 
   &:hover {
-    background-color: var(--main-color--);
+    background: var(--text-color--);
+    color: var(--main-color--);
   }
 
+  &:active {
+    background: var(--text-color--);
+    color: var(--main-color--);
+  }
   @media (min-width: 768px) {
     display: block;
     /* width: 112px; */

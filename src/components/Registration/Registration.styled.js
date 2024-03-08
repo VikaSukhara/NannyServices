@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Field } from 'formik';
+import { Field, ErrorMessage } from 'formik';
 export const Wrap = styled.div`
   width: 100%;
   height: auto;
@@ -41,7 +41,7 @@ export const Button = styled.button`
   color: var(--text-color--);
   margin-top: 22px;
   &:hover {
-    background: rgba(16, 57, 49, 0.2);
+    background: #a1b3a8;
     color: var(--main-color--);
   }
 
@@ -57,7 +57,6 @@ export const Input = styled(Field)`
   box-sizing: border-box;
   border: 1px solid rgba(17, 16, 28, 0.1);
   border-radius: 12px;
-  margin-bottom: 18px;
   padding: 18px 18px;
 
   &::placeholder {
@@ -70,3 +69,10 @@ export const Input = styled(Field)`
     text-align: left;
   }
 `;
+
+
+export const StyledError = styled(ErrorMessage)`
+  color: red;
+  font-size: 15px;
+`;
+

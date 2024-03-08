@@ -24,7 +24,6 @@ export const FavoriteList = () => {
     'Z to A',
     'Less than 10$',
     'Greater than 10$',
-    'Popular',
     'Not popular',
     'Show all',
   ];
@@ -35,7 +34,6 @@ export const FavoriteList = () => {
     dispatch(filtersFavoriteAction(event.target.value));
     setLimit(3);
   };
-
 
   return (
     <div>
@@ -49,9 +47,8 @@ export const FavoriteList = () => {
                 id="position"
                 value={selected}
                 onChange={handleSelect}
-                defaultValue={'DEFAULT'}
               >
-                <option value="DEFAULT">Popular</option>
+                <option selected>Popular</option>
                 {options.map(option => (
                   <option key={option} value={option}>
                     {option}
@@ -66,11 +63,13 @@ export const FavoriteList = () => {
           ) : (
             <H3>You don't have any favorite cars</H3>
           )}
-          {favouritesList.length !== 0 && favouritesList.length % 3 === 0 && (
-            <Button type="button" onClick={() => setLimit(limit + 3)}>
-              Load more
-            </Button>
-          )}
+          {favourites.length > 3 &&
+            favouritesList.length !== 0 &&
+            favouritesList.length % 3 === 0 && (
+              <Button type="button" onClick={() => setLimit(limit + 3)}>
+                Load more
+              </Button>
+            )}
         </Container>
       </Wrap>
     </div>

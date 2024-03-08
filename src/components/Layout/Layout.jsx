@@ -55,9 +55,17 @@ export const Layout = () => {
     const token = localStorage.getItem('token');
     if (token) {
       dispatch(refreshUser());
-      console.log();
     }
   }, [dispatch]);
+
+
+  useEffect(() => {
+    if (isOpen || isOpenRegistration) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen, isOpenRegistration]);
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -88,7 +96,7 @@ export const Layout = () => {
         toast.success(`You are logged out`);
       })
       .catch(error => {
-        console.log(error);
+        toast.error('Something went wrong. Try again', error.message);
       });
   };
 

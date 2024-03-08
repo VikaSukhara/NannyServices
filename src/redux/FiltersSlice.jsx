@@ -8,7 +8,6 @@ export const filtersSlice = createSlice({
   },
   reducers: {
     filtersNanyAction(state, action) {
-      console.log(action.payload, 'action.payload')
       state.filtersNany = action.payload;
     },
     filtersFavoriteAction(state, action) {
